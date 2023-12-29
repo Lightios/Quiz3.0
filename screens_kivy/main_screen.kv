@@ -1,0 +1,12 @@
+<MainScreen>:
+    MDRectangleFlatButton:
+        text_color: app.theme_cls.accent_color
+        text: "Image mode"
+        pos_hint: {"center_x": 0.5, "center_y": 0.4}
+        on_press: app.root.current = "image_mode"
+
+    MDRectangleFlatButton:
+        text: "Test mode"
+        text_color: app.theme_cls.accent_color
+        pos_hint: {"center_x": 0.5, "center_y": 0.6}
+        on_press: app.root.current = "test_mode"

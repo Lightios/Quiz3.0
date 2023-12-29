@@ -1,0 +1,30 @@
+<ImageScreen>:
+    name: 'image'
+    Image:
+        id: image
+        allow_stretch: True
+        keep_ratio: True
+        size_hint: 0.5, 0.3
+        pos_hint: {'center_x': .5, 'center_y': .75}
+        source: "data/a.png"
+
+    BoxLayout:
+        id: answers
+        orientation: 'vertical'
+        size_hint: 0.5, 0.4
+        pos_hint: {'center_x': .5, 'center_y': .35}
+
+
+    MDRectangleFlatButton:
+        text_color: app.theme_cls.accent_color
+        id: check
+        pos_hint: {"center_x": 0.35, "center_y": 0.1}
+        text: "Check answer"
+        on_press: root.check_answer()
+
+    MDRectangleFlatButton:
+        text_color: app.theme_cls.accent_color
+        id: next
+        pos_hint: {"center_x": 0.65, "center_y": 0.1}
+        text: "Next question"
+        on_press: root.update_labels()
